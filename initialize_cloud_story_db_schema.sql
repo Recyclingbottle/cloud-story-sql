@@ -1,8 +1,8 @@
--- File: initialize_cloud_db_schema.sql
+-- File: initialize_cloud_story_db_schema.sql
 
 -- 1. 데이터베이스 생성 및 사용
-CREATE DATABASE cloud_db;
-USE cloud_db;
+CREATE DATABASE cloud_story_db;
+USE cloud_story_db;
 
 -- 2. 테이블 생성
 

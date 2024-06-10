@@ -1,8 +1,8 @@
--- File: initialize_cloud_db_data.sql
+-- File: initialize_cloud_story_db_data.sql
 
 -- 3. 더미 데이터 삽입
 
-USE cloud_db;
+USE cloud_story_db;
 
 -- users 더미 데이터
 INSERT INTO users (email, password, nickname, profile_image_url) VALUES 
