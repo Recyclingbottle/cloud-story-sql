@@ -1,6 +1,7 @@
 -- File: initialize_cloud_story_db_schema.sql
 
 -- 1. 데이터베이스 생성 및 사용
+DROP DATABASE IF EXISTS cloud_story_db;
 CREATE DATABASE cloud_story_db;
 USE cloud_story_db;
 
@@ -27,7 +28,17 @@ CREATE TABLE posts (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     like_count INT DEFAULT 0,
     dislike_count INT DEFAULT 0,
+    view_count INTEGER DEFAULT 0,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- post_photos 테이블 
+CREATE TABLE post_photos (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    post_id BIGINT,
+    url VARCHAR(255) NOT NULL,
+    photo_order INT NOT NULL,
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
 );
 
 -- comments 테이블
