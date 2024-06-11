@@ -29,6 +29,7 @@ CREATE TABLE posts (
     like_count INT DEFAULT 0,
     dislike_count INT DEFAULT 0,
     view_count INTEGER DEFAULT 0,
+    comment_count INT DEFAULT 0,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
