@@ -47,6 +47,7 @@ cloud-story
 | `like_count`    | 게시글 좋아요 수              |
 | `dislike_count` | 게시글 싫어요 수              |
 | `view_count`    | 게시글 조회수                 |
+| `commen_count`  | 게시글 댓글수                 |
 
 ### 3. Post Photos 테이블
 
